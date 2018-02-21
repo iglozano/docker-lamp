@@ -76,7 +76,7 @@ $ docker-compose down
 docker exec -it dockerlamp_web_1 /bin/bash
 ```
 
-Replace _dockerlamp_web_1_ with _name_ of: 
+Replace _dockerlamp_web_1_ with _name_ of:
 
 ```bash
 docker-compose ps
@@ -131,7 +131,7 @@ You can check a special varnish vcl file for [Drupal](https://wwww.drupal.org) *
 **Note**: drupal-base.vcl uses MIT license.
 
 If you like to add **drupal-base.vcl** add this lines. Added by default to 4.0 version.
-     
+
 ```yml
     volumes:
       - ./config/varnish/4.0/drupal-base.vcl:/etc/varnish/default.vcl
@@ -199,7 +199,7 @@ You can see _volumes_ to check existing configurations for _vhosts_. _vhosts_ vo
 ```bash
 #!bash
 
-cp config/vhosts/example.conf.example config/vhosts/drupal8.conf
+cp config/vhosts/example.conf config/vhosts/drupal8.conf
 sed -i 's/example/drupal8/' config/vhosts/drupal8.conf
 ```
 
@@ -262,7 +262,7 @@ Xdebug is enabled to debug shell command as drush.
 
 Can read this post [https://www.keopx.net/blog/debugging-drush-scripts-con-xdebug-y-phpstorm](https://www.keopx.net/blog/debugging-drush-scripts-con-xdebug-y-phpstorm)
 
-_Note: remember check docker-compose.yml to enable this feature._ 
+_Note: remember check docker-compose.yml to enable this feature._
 
 #### Drush
 
@@ -276,7 +276,7 @@ If you need run some drush command to sync with some alias, to access to remote 
 
 #### SSH
 
-If you need run some command, like a composer, to access to remote using ssh keys, you can uncomment next line to works into docker image. 
+If you need run some command, like a composer, to access to remote using ssh keys, you can uncomment next line to works into docker image.
 
 ```yml
     volumes:
